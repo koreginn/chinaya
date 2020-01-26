@@ -1,0 +1,264 @@
+.header {
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.order {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.order-data {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.order-delivery {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.order-data__block {
+  width: 100%;
+  padding: 1rem;
+  margin-left: 2rem !important;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.order-data__title {
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+
+/* мб удалить */
+
+.order-user {
+  margin-top: 2rem;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 0.25rem;
+}
+
+.order-user__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #efeeef;
+}
+
+.order-user__header h2 {
+  margin: 1rem 0 1rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.order-user__text {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #efeeef;
+}
+
+.order-user__text span {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #000000;
+}
+
+.order-user__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #efeeef;
+  border-top: 1px solid #efeeef;
+  padding: 1rem;
+}
+
+.order-user__description:nth-child(1) {
+  border-top: 0px solid #efeeef;
+}
+
+.order-user__description-text {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-user__items {
+  width: 33% !important;
+}
+
+.order-user__header-items span {
+  width: 33% !important;
+}
+
+.order-user__description-text span {
+  width: 30%;
+  text-align: center;
+  padding: 0.5rem;
+  background: #eeeeee;
+  color: #ff7574;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.order-user__header span {
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 1rem 1.5rem 1rem 0;
+  color: #181818;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #558076;
+  border: 0.05rem solid #558076;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in;
+}
+
+.goods-blocks__control-view {
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: #4863b2;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+  margin-right: 0.25rem;
+}
+
+.goods-blocks__control-view:hover {
+  opacity: 0.5;
+  transition: all 0.2s ease-in;
+}
+
+.order-user__header span:hover {
+  color: #181818;
+  border: 0.05rem solid #181818;
+  transition: all 0.2s ease-in;
+}
+
+/* Дополнительные стили для статус */
+
+.status-scanned span {
+  background: #4863b2 !important;
+  color: #ffffff !important;
+}
+
+.status-shipped span {
+  background: #ebba16 !important;
+  color: #ffffff !important;
+}
+
+.status-delivered span {
+  background: #558076 !important;
+  color: #ffffff !important;
+}
+
+.status-cancelled span {
+  background: #ec7789 !important;
+  color: #ffffff !important;
+}
+
+.common-return {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.common-return i {
+  color: #558076;
+  transition: all 0.2s ease-in;
+}
+
+.common-return a {
+  margin-left: 0.5rem;
+  color: #558076;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+
+.common-return:hover {
+  opacity: 0.5;
+  transition: all 0.2s ease-in;
+}
+
+.problems-with-order {
+  padding: 1rem;
+  margin-top: 2rem;
+  background: #e94136;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.problems-with-order img {
+  width: 40px;
+  margin-left: 1rem;
+}
+
+.problems-with-order p {
+  color: #ffffff;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.problems-with-order__link {
+  color: #ffffff;
+  transition: all 0.2s ease-in;
+}
+
+.problems-with-order__link:hover {
+  opacity: 0.5;
+  transition: all 0.2s ease-in;
+}
+
+.trackcode {
+  margin-top: 2rem;
+  background: #558076;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.trackcode__text {
+  margin-left: 1rem;
+}
+
+.trackcode__value {
+  margin-left: 0.3rem;
+}
+
+.trackcode__image {
+  width: 40px;
+  margin-left: 0.5rem;
+}

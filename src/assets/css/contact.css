@@ -1,0 +1,75 @@
+.header {
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.contact {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  font-size: 2.5rem;
+}
+
+.contact-information {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-information__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-information__text {
+  margin-top: 2rem;
+}
+
+.contact-shop__about {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-shop__about i {
+  color: #558076;
+  font-size: 1.1rem;
+}
+
+.contact-shop__about i > span {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.contact-shop__about-text {
+  margin-top: 1rem;
+}
+
+.contact-shop__image {
+  width: 70%;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-shop__image img {
+  width: 100%;
+}

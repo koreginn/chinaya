@@ -1,0 +1,261 @@
+.header {
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.profile {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-banner {
+  position: relative;
+  width: 100%;
+  background: url("../../assets/img/profile/banner.jpg") no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile-banner img {
+  cursor: pointer;
+  margin: 3rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #e3e3e3;
+  transition: all 0.2s ease-in;
+}
+
+.profile-banner img:hover {
+  opacity: 0.7;
+  transition: all 0.2s ease-in;
+}
+
+.profile-banner__text-name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.profile-banner__bonus {
+  margin-top: 0.5rem;
+}
+
+.profile-banner__text-bonus {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.profile-banner__text-value {
+  font-size: 1.1rem;
+  color: #a7a7a7;
+  margin-left: 0.3rem;
+  font-weight: 500;
+}
+
+.profile-data {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-delivery {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-data__block {
+  width: 100%;
+  padding: 1rem;
+  margin-left: 2rem !important;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.profile-data__title {
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+
+/* мб удалить */
+
+.profile-user {
+  margin-top: 2rem;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 0.25rem;
+}
+
+.profile-user__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #efeeef;
+}
+
+.profile-user__header h2 {
+  margin: 1rem 0 1rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.profile-user__text {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #efeeef;
+}
+
+.profile-user__text span {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #000000;
+}
+
+.profile-user__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #efeeef;
+  border-top: 1px solid #efeeef;
+  padding: 1rem;
+}
+
+.profile-user__description:nth-child(1) {
+  border-top: 0px solid #efeeef;
+}
+
+.profile-user__description-text {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-user__description-text span {
+  width: 30%;
+  text-align: center;
+  padding: 0.5rem;
+  background: #eeeeee;
+  color: #ff7574;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.profile-user__header span {
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 1rem 1.5rem 1rem 0;
+  color: #181818;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #558076;
+  border: 0.05rem solid #558076;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in;
+}
+
+.goods-blocks__control-view {
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: #4863b2;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+  margin-right: 0.25rem;
+}
+
+.goods-blocks__control-view:hover {
+  opacity: 0.5;
+  transition: all 0.2s ease-in;
+}
+
+.profile-user__header span:hover {
+  color: #181818;
+  border: 0.05rem solid #181818;
+  transition: all 0.2s ease-in;
+}
+
+/* Дополнительные стили для статус */
+
+.status-scanned span {
+  background: #4863b2 !important;
+  color: #ffffff !important;
+}
+
+.status-shipped span {
+  background: #ebba16 !important;
+  color: #ffffff !important;
+}
+
+.status-delivered span {
+  background: #558076 !important;
+  color: #ffffff !important;
+}
+
+.status-cancelled span {
+  background: #ec7789 !important;
+  color: #ffffff !important;
+}
+
+.edit-data__auth {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0rem;
+}
+
+.edit-data__auth span {
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  color: #fff;
+  background: #558076;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+  transition: all 0.2s ease-in;
+}
+
+.edit-data__auth span:hover {
+  opacity: 0.7;
+  transition: all 0.2s ease-in;
+}
+
+.logout {
+  padding-left: 0.8rem !important;
+  padding-right: 0.8rem !important;
+  background: red !important;
+}
+
+.user-id__auth {
+  position: absolute;
+  top: 0.5rem;
+  right: 0rem;
+}
+
+.user-id__auth span {
+  color: #ffffff;
+  margin: 0.5rem;
+  font-size: 0.9rem;
+}
