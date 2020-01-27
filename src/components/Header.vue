@@ -1,53 +1,77 @@
 <template>
   <header class="header">
     <div class="header-size">
-      <router-link class="header-logotype" to="/">
-        <img src="@/assets/img/logotype1.png" alt="ChinaЯ" />
-      </router-link>
-      <nav class="header-menu">
-        <ul class="header-menu__list">
-          <li class="header-menu__list-item">
-            <router-link to="/">Главная</router-link>
-          </li>
-          <li class="header-menu__list-item">
-            <router-link to="/history">История</router-link>
-          </li>
-          <li class="header-menu__list-item">
-            <router-link to="/catalog">Каталог</router-link>
-          </li>
-          <li class="header-menu__list-item">
-            <router-link to="/support">Поддержка</router-link>
-          </li>
-          <li class="header-menu__list-item">
-            <router-link to="/contact">Контакты</router-link>
-          </li>
-        </ul>
-      </nav>
-      <div v-if="this.$store.getters.getAuth == false" class="user-menu">
-        <img
-          @click="closeModalAuth()"
-          class="header-user"
-          src="https://img.icons8.com/ios/100/000000/user-male-circle.png"
-        />
-      </div>
-      <div v-if="this.$store.getters.getAuth == true" class="user-auth">
-        <span>{{ $store.getters.getNameUser }}.</span>
-        <router-link to="/profile">
+      <div class="header-size__block-first">
+        <router-link class="header-logotype" to="/">
+          <img src="@/assets/img/logotype1.png" alt="ChinaЯ" />
+        </router-link>
+        <nav class="header-menu">
+          <ul class="header-menu__list">
+            <li class="header-menu__list-item">
+              <router-link to="/">Главная</router-link>
+            </li>
+            <li class="header-menu__list-item">
+              <router-link to="/history">История</router-link>
+            </li>
+            <li class="header-menu__list-item">
+              <router-link to="/catalog">Каталог</router-link>
+            </li>
+            <li class="header-menu__list-item">
+              <router-link to="/support">Поддержка</router-link>
+            </li>
+            <li class="header-menu__list-item">
+              <router-link to="/contact">Контакты</router-link>
+            </li>
+          </ul>
+        </nav>
+        <div v-if="this.$store.getters.getAuth == false" class="user-menu">
           <img
-            v-if="$store.getters.getPhotoUser == null"
+            @click="closeModalAuth()"
             class="header-user"
             src="https://img.icons8.com/ios/100/000000/user-male-circle.png"
           />
-          <img
-            v-if="$store.getters.getPhotoUser != null"
-            class="header-user auth-user"
-            :src="$store.getters.getPhotoUser"
-          />
-        </router-link>
-        <router-link class="basket-menu__block" to="/basket">
-          <img src="https://img.icons8.com/pastel-glyph/64/000000/shopping-cart--v2.png" />
-          <span class="basket-menu__value">{{ $store.getters.getBasketGoods }}</span>
-        </router-link>
+        </div>
+        <div v-if="this.$store.getters.getAuth == true" class="user-auth">
+          <span>{{ $store.getters.getNameUser }}.</span>
+          <router-link to="/profile">
+            <img
+              v-if="$store.getters.getPhotoUser == null"
+              class="header-user"
+              src="https://img.icons8.com/ios/100/000000/user-male-circle.png"
+            />
+            <img
+              v-if="$store.getters.getPhotoUser != null"
+              class="header-user auth-user"
+              :src="$store.getters.getPhotoUser"
+            />
+          </router-link>
+          <router-link class="basket-menu__block" to="/basket">
+            <img src="https://img.icons8.com/pastel-glyph/64/000000/shopping-cart--v2.png" />
+            <span class="basket-menu__value">{{ $store.getters.getBasketGoods }}</span>
+          </router-link>
+        </div>
+      </div>
+      <div class="header-size__block-second">
+        <nav class="header-menu">
+          <ul class="header-menu__list">
+            <li class="header-menu__list-item">
+              <router-link to="/">Главная</router-link>
+            </li>
+            <li class="header-menu__list-item">
+              <router-link to="/history">История</router-link>
+            </li>
+            <li class="header-menu__list-item">
+              <router-link to="/catalog">Каталог</router-link>
+            </li>
+            <li class="header-menu__list-item">
+              <router-link to="/support">Поддержка</router-link>
+            </li>
+            <li class="header-menu__list-item">
+              <router-link to="/contact">Контакты</router-link>
+            </li>
+          </ul>
+        </nav>
+        <div @click="openMenuMobile()" class="modal-menu__button">Открыть меню</div>
       </div>
     </div>
     <transition name="fade">
@@ -174,6 +198,28 @@
         </form>
       </div>
     </transition>
+    <transition name="fade">
+      <div v-if="this.$store.getters.getMenuMobile != false" class="modal-auth">
+        <ul class="modal-menu__list">
+          <i @click="closeMenuMobile()" class="far fa-times-circle modal__close"></i>
+          <li class="modal-menu__list-item">
+            <router-link to="/">Главная</router-link>
+          </li>
+          <li class="modal-menu__list-item">
+            <router-link to="/history">История</router-link>
+          </li>
+          <li class="modal-menu__list-item">
+            <router-link to="/catalog">Каталог</router-link>
+          </li>
+          <li class="modal-menu__list-item">
+            <router-link to="/support">Поддержка</router-link>
+          </li>
+          <li class="modal-menu__list-item">
+            <router-link to="/contact">Контакты</router-link>
+          </li>
+        </ul>
+      </div>
+    </transition>
   </header>
 </template>
 
@@ -269,6 +315,12 @@ export default {
     },
     closeModalAuth() {
       this.$store.commit("modalAuth");
+    },
+    closeMenuMobile() {
+      this.$store.commit("setMenuMobile");
+    },
+    openMenuMobile() {
+      this.$store.commit("setMenuMobile");
     },
     returnPassword() {
       if (this.email != "") {

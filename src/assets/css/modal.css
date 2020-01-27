@@ -199,3 +199,33 @@
   justify-content: flex-end;
   align-items: flex-start;
 }
+
+.modal-menu__list {
+  position: absolute;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 0.25rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-menu__list-item {
+  padding: 0.7rem;
+}
+
+.modal-menu__list-item a {
+  color: #000000;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+
+.modal-menu__list-item:hover {
+  opacity: 0.5;
+  transition: all 0.2s ease-in;
+}

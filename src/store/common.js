@@ -45,6 +45,9 @@ export default {
     },
     setOrderValue(state, value) {
       state.orderValue = value;
+    },
+    setMenuMobile(state) {
+      state.modalMenuMobile = !state.modalMenuMobile;
     }
   },
   getters: {
@@ -57,7 +60,8 @@ export default {
     getNumberBasket: state => state.numberBasket,
     getEmailUser: state => state.emailUser,
     getLastOrderValue: state => state.orderValue,
-    getBonus: state => state.bonus
+    getBonus: state => state.bonus,
+    getMenuMobile: state => state.modalMenuMobile
   },
   state: {
     auth: false,
@@ -69,6 +73,7 @@ export default {
     numberBasket: null,
     emailUser: null,
     orderValue: null,
-    bonus: null
+    bonus: null,
+    modalMenuMobile: false
   }
 };
