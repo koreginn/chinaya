@@ -180,6 +180,13 @@
               type="password"
               placeholder="Пароль"
             />
+            <div class="user-agreement__check">
+              <input type="checkbox" value="true" v-model="checkUserAgreement" />
+              <p>
+                Я согласен с условиями
+                <a @click="openUserAgreement()">пользовательского соглашения</a>
+              </p>
+            </div>
             <input class="modal-auth__button" type="submit" value="Создать аккаунт" />
             <div class="modal-auth__action">
               <span
@@ -241,7 +248,8 @@ export default {
     name: "",
     last_name: "",
     password: "",
-    auth: ""
+    auth: "",
+    checkUserAgreement: null
   }),
   created() {
     if (localStorage.getItem("auth") == null) {
@@ -259,26 +267,33 @@ export default {
         this.last_name != "" &&
         this.password != ""
       ) {
-        axios
-          .post("https://api.xn----7sba9au1d3c.xn--p1ai/api/register", {
-            email: this.email,
-            surname: this.surname,
-            name: this.name,
-            last_name: this.last_name,
-            password: this.password
-          })
-          .then(response => {
-            if (response.data["status"] == "Error") {
-              this.textModalStatus =
-                "Указанная электронная почта уже существует!";
-              this.modalStatus = true;
-              setTimeout(() => (this.modalStatus = false), 2000);
-            } else {
-              this.textModalStatus = "Аккаунт успешно создан";
-              this.modalStatus = true;
-              setTimeout(() => (this.modalStatus = false), 2000);
-            }
-          });
+        if (this.checkUserAgreement == true) {
+          axios
+            .post("https://api.xn----7sba9au1d3c.xn--p1ai/api/register", {
+              email: this.email,
+              surname: this.surname,
+              name: this.name,
+              last_name: this.last_name,
+              password: this.password
+            })
+            .then(response => {
+              if (response.data["status"] == "Error") {
+                this.textModalStatus =
+                  "Указанная электронная почта уже существует!";
+                this.modalStatus = true;
+                setTimeout(() => (this.modalStatus = false), 2000);
+              } else {
+                this.textModalStatus = "Аккаунт успешно создан";
+                this.modalStatus = true;
+                setTimeout(() => (this.modalStatus = false), 2000);
+              }
+            });
+        } else {
+          this.textModalStatus =
+            "Ошибка! Вы не согласны с правилами пользовальзовательского соглашения";
+          this.modalStatus = true;
+          setTimeout(() => (this.modalStatus = false), 2000);
+        }
       } else {
         this.textModalStatus = "Укажите все данные!";
         this.modalStatus = true;
@@ -324,6 +339,10 @@ export default {
     },
     closeModalMenu() {
       this.$store.commit("setMenuMobile");
+    },
+    openUserAgreement() {
+      this.modalRegister = false;
+      this.$router.push("/user-agreement");
     },
     returnPassword() {
       if (this.email != "") {

@@ -232,6 +232,28 @@
   transition: all 0.2s ease-in;
 }
 
+.user-agreement__check {
+  display: flex;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-agreement__check input {
+  padding: 0.5rem;
+}
+
+.user-agreement__check p {
+  margin-left: 1rem;
+}
+
+.user-agreement__check p a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #558076;
+}
+
 /* Адаптация под все устройства */
 
 @media screen and (max-width: 1600px) {
@@ -275,6 +297,24 @@
 
   .modal-auth__action span {
     padding: 0.5rem;
+  }
+
+  .modal-auth__size input {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  .modal-auth__size-title {
+    margin-bottom: 1rem !important;
+  }
+
+  .modal-auth__button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .user-agreement__check p {
+    font-size: 0.9rem;
   }
 }
 

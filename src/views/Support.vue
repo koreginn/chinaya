@@ -33,10 +33,7 @@
           <h2 class="user-agreement__title">Пользовательское соглашение</h2>
           <p class="user-agreement__text">
             Пользовательское соглашение вы можете прочитать
-            <a
-              class="user-agreement__link"
-              href="#"
-            >здесь</a>
+            <router-link class="user-agreement__link" to="/user-agreement">здесь</router-link>
           </p>
         </div>
         <div class="data-protection">
