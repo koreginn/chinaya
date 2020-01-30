@@ -109,6 +109,7 @@
 .basket-goods__block-text h2 {
   font-size: 1.2rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .basket-goods__block-text span {
@@ -281,4 +282,110 @@
   width: 55%;
   text-align: center;
   font-weight: 300;
+}
+
+/* Адаптация под все устройства */
+
+@media screen and (max-width: 1280px) {
+  .basket-goods__block {
+    flex-direction: column;
+  }
+
+  .basket-goods__block-description {
+    margin-left: 0rem;
+  }
+
+  .basket-goods__block-description {
+    margin: 1.5rem;
+  }
+
+  .basket-goods__info-text {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 1.5rem;
+  }
+
+  .basket-goods__info-text p {
+    font-size: 1.4rem;
+  }
+
+  .basket-goods__info-text {
+    width: 50%;
+  }
+
+  .basket-goods__block-price {
+    width: 100%;
+    text-align: center;
+    margin: 1.5rem;
+  }
+
+  .basket-goods__block-delete {
+    margin: 1.5rem;
+  }
+
+  .basket-goods__block-number {
+    margin: 1.5rem;
+  }
+
+  .basket-menu {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .basket-menu__action {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .basket-empty__text {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .basket-empty__title {
+    text-align: center;
+  }
+
+  .basket-goods__block-description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .basket-goods__block-text {
+    margin-left: 0rem;
+    margin: 1.5rem;
+  }
+
+  .basket-total__pay {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .basket-goods__info-text {
+    width: 100%;
+  }
+
+  .basket-menu {
+    flex-direction: column;
+  }
+
+  .basket-menu__action {
+    margin-top: 2rem;
+  }
+
+  .basket-total__pay-value {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .basket-empty__title {
+    width: 80%;
+  }
 }

@@ -79,6 +79,7 @@
 }
 
 .modal-auth__size-title {
+  text-align: center;
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-size: 2rem;
@@ -115,6 +116,7 @@
   border-radius: 0.5rem;
   transition: all 0.2s ease-in;
   cursor: pointer;
+  text-align: center;
 }
 
 .modal-auth__action span:hover {
@@ -228,4 +230,57 @@
 .modal-menu__list-item:hover {
   opacity: 0.5;
   transition: all 0.2s ease-in;
+}
+
+/* Адаптация под все устройства */
+
+@media screen and (max-width: 1600px) {
+  .modal-auth__form {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .modal-auth__form {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .modal-auth__form {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-auth__form {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal-auth__form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .modal-auth__form {
+    width: 80%;
+  }
+
+  .modal-auth__size {
+    width: 95%;
+  }
+
+  .modal-auth__action span {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal-auth__form {
+    width: 83%;
+    border-radius: 0rem;
+  }
 }

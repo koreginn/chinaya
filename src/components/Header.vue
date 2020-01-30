@@ -202,19 +202,19 @@
       <div v-if="this.$store.getters.getMenuMobile != false" class="modal-auth">
         <ul class="modal-menu__list">
           <i @click="closeMenuMobile()" class="far fa-times-circle modal__close"></i>
-          <li class="modal-menu__list-item">
+          <li @click="closeModalMenu()" class="modal-menu__list-item">
             <router-link to="/">Главная</router-link>
           </li>
-          <li class="modal-menu__list-item">
+          <li @click="closeModalMenu()" class="modal-menu__list-item">
             <router-link to="/history">История</router-link>
           </li>
-          <li class="modal-menu__list-item">
+          <li @click="closeModalMenu()" class="modal-menu__list-item">
             <router-link to="/catalog">Каталог</router-link>
           </li>
-          <li class="modal-menu__list-item">
+          <li @click="closeModalMenu()" class="modal-menu__list-item">
             <router-link to="/support">Поддержка</router-link>
           </li>
-          <li class="modal-menu__list-item">
+          <li @click="closeModalMenu()" class="modal-menu__list-item">
             <router-link to="/contact">Контакты</router-link>
           </li>
         </ul>
@@ -320,6 +320,9 @@ export default {
       this.$store.commit("setMenuMobile");
     },
     openMenuMobile() {
+      this.$store.commit("setMenuMobile");
+    },
+    closeModalMenu() {
       this.$store.commit("setMenuMobile");
     },
     returnPassword() {

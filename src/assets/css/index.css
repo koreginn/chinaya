@@ -365,9 +365,11 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .welcome-blocks__item {
+  width: 460px;
   position: relative;
 }
 
@@ -375,6 +377,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.welcome-blocks__item-first img {
+  width: 100%;
 }
 
 .welcome-blocks__item-second {
@@ -573,14 +579,74 @@ main {
 }
 
 .footer-button {
-  display: none;
+  display: none !important;
 }
 
 /* Адаптация под все устройства */
 
+@media screen and (max-width: 1750px) {
+  .welcome-blocks__item-second {
+    width: 100% !important;
+  }
+
+  .welcome-blocks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .welcome-blocks__item {
+    margin: 2rem;
+  }
+
+  .welcome-blocks__item-first {
+    width: 100% !important;
+  }
+
+  .tea-about__second-post {
+    left: 0rem;
+  }
+
+  .tea-new__blocks {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .tea-new__block {
+    width: 30%;
+    margin: 2rem;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .header-menu__list-item a {
     padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .photo-slider__text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .tea-about__block-fisrt img {
+    width: 80%;
+  }
+
+  .tea-about__first-post {
+    left: 0rem;
+  }
+
+  .tea-about__second-post {
+    left: 4rem;
+  }
+
+  .tea-about__block-fisrt img {
+    left: 4rem;
   }
 }
 
@@ -596,6 +662,10 @@ main {
 
   .header-menu__list-item a {
     padding: 1rem;
+  }
+
+  .modal-menu__button {
+    display: none;
   }
 }
 
@@ -615,11 +685,49 @@ main {
   .footer-menu__list {
     margin: 1rem;
   }
+
+  .photo-slider__text h1 {
+    font-size: 2.5rem;
+  }
+
+  .tea-about__blocks {
+    flex-direction: column;
+  }
+
+  .tea-about__block {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .tea-about__block-second {
+    padding: 1rem;
+  }
+
+  .tea-about__second-post {
+    left: 18rem;
+  }
+
+  .tea-about__first-post {
+    left: -4rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .header-logotype {
     width: 10%;
+  }
+
+  .tea-about__block-fisrt img {
+    width: 100%;
+    left: 0rem;
+  }
+
+  .tea-about__second-post {
+    left: 19rem;
+  }
+
+  .tea-about__first-post {
+    left: -7rem;
   }
 }
 
@@ -627,10 +735,67 @@ main {
   .header-menu__list-item a {
     padding: 0.5rem;
   }
+
+  .photo-slider__text h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .photo-slider__text a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .header-menu__list-item a {
+    padding: 0.5rem;
+  }
+
+  .tea-new__block {
+    margin: 3rem;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .tea-about__size {
+    display: none;
+  }
+
+  .tea-new__in-basket {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .header-size__block-second nav {
+    display: none;
+  }
+
+  .tea-new__title {
+    margin-bottom: 2rem;
+  }
+
+  .modal-menu__button {
+    display: flex;
+  }
+
+  .photo-slider__text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .tea-new__block {
+    margin: 4rem;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .photo-slider {
     display: none;
   }
 }
@@ -644,6 +809,10 @@ main {
 @media screen and (max-width: 600px) {
   .footer-menu__list {
     display: none;
+  }
+
+  .footer-button {
+    display: flex !important;
   }
 
   .footer-button {
@@ -662,6 +831,21 @@ main {
 @media screen and (max-width: 500px) {
   .header-logotype {
     width: 17.5%;
+  }
+
+  .welcome-blocks__item-text {
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .welcome-blocks__item {
+    width: 350px;
+    position: relative;
+  }
+
+  .tea-new__block {
+    width: 90%;
   }
 }
 
@@ -683,6 +867,20 @@ main {
 
   .social-network a {
     width: 35%;
+  }
+
+  .welcome-blocks__item-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .welcome__title {
+    text-align: center;
+  }
+
+  .welcome-blocks__item-text {
+    font-size: 0.9rem;
   }
 }
 

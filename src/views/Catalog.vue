@@ -2,7 +2,12 @@
   <main>
     <section class="catalog">
       <div class="catalog-goods">
-        <div class="catalog-goods__filter">
+        <div class="catalog-goods__filter" v-if="openHeaderForMobile == true">
+          <i
+            v-if="width <= 1440"
+            @click="openHeaderForMobile = !openHeaderForMobile"
+            class="fas fa-times close-header__mobile"
+          ></i>
           <h1 class="catalog-goods__filter-title">Чай</h1>
           <ul class="catalog-goods__filter-menu">
             <li
@@ -82,6 +87,12 @@
               </div>
             </div>
           </div>
+          <div class="catalog-goods__filter-mobile">
+            <span
+              @click="openHeaderForMobile = !openHeaderForMobile"
+              class="categoris-button__mobile"
+            >Фильтр</span>
+          </div>
           <div class="catalog-goods__items-card">
             <div
               v-for="(item, index) in goodsList"
@@ -134,14 +145,24 @@ export default {
     value: "",
     activeButtonSort: 0,
     modalStatus: false,
-    textModalStatus: ""
+    width: window.innerWidth,
+    textModalStatus: "",
+    openHeaderForMobile: false
   }),
   computed: {
     goodsList() {
       return this.sortTeasCatalog();
     }
   },
+  mounted() {
+    window.onresize = () => {
+      this.width = window.innerWidth;
+    };
+  },
   created() {
+    if (this.width >= 1441) {
+      this.openHeaderForMobile = true;
+    }
     axios
       .get("https://api.xn----7sba9au1d3c.xn--p1ai/api/shop-goods")
       .then(responce => {
@@ -156,10 +177,18 @@ export default {
   methods: {
     filterCatalog(name_categories) {
       this.openBreadcrumbText = name_categories;
+
+      if (this.width <= 1440) {
+        this.openHeaderForMobile = false;
+      }
     },
     cancelFilter() {
       this.openBreadcrumbText = "";
       this.openBreadcrumbTitle = !this.openBreadcrumbTitle;
+
+      if (this.width <= 1440) {
+        this.openHeaderForMobile = false;
+      }
     },
     sortButton(id) {
       switch (id) {

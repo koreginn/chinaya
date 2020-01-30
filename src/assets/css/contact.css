@@ -73,3 +73,39 @@
 .contact-shop__image img {
   width: 100%;
 }
+
+/* Адаптация под все устройства */
+
+@media screen and (max-width: 1024px) {
+  .contact-information {
+    flex-direction: column;
+  }
+
+  .contact-information__block:nth-child(2) {
+    margin-top: 4rem;
+  }
+
+  .contact-shop__about-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contact-shop__image {
+    width: 90%;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-shop__about-text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact-shop__about-text {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}

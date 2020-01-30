@@ -4,7 +4,7 @@
 
 .order {
   width: 80%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -99,14 +99,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .order-user__items {
   width: 33% !important;
+  text-align: center;
 }
 
 .order-user__header-items span {
   width: 33% !important;
+  text-align: center;
 }
 
 .order-user__description-text span {
@@ -118,6 +121,7 @@
   border-radius: 0.25rem;
   font-size: 0.8rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .order-user__header span {
@@ -261,4 +265,30 @@
 .trackcode__image {
   width: 40px;
   margin-left: 0.5rem;
+}
+
+/* Адаптация под все устройства */
+
+@media screen and (max-width: 768px) {
+  .order-user__text {
+    display: none;
+  }
+
+  .order-user__information {
+    flex-direction: column;
+  }
+
+  .order-user__description {
+    flex-direction: column;
+  }
+
+  .order-user__items {
+    margin: 1rem;
+    width: 100%;
+  }
+
+  .order-user__description-text {
+    margin: 1rem;
+    width: 100%;
+  }
 }

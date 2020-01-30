@@ -47,3 +47,57 @@
   margin: 3rem;
   line-height: 2rem;
 }
+
+/* Адаптация под все устройства */
+
+@media screen and (max-width: 1600px) {
+  .history-information__images {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .history-information__images img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .history-information__text {
+    text-align: center;
+  }
+
+  .history-information__images {
+    flex-direction: column;
+  }
+
+  .history-information__images img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .history-information__text {
+    margin: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .history-information__images img {
+    width: 100%;
+    margin: 0rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .history-information__text {
+    margin: 0rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .history-title {
+    text-align: center;
+  }
+}

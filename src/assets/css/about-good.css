@@ -238,3 +238,76 @@
 .activegram {
   color: #000000 !important;
 }
+
+/* Адаптация под все устройства */
+
+@media screen and (max-width: 1024px) {
+  .good-about-information {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .good-about__price {
+    margin-top: 4rem;
+    margin-left: 0rem;
+  }
+
+  .catalog-goods__items-select {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .good__about-descrition-text {
+    text-align: center;
+  }
+
+  .good__about-descrition-title {
+    text-align: center;
+  }
+
+  .good-breadcrumb__menu {
+    flex-wrap: wrap;
+  }
+
+  .good-breadcrumb__menu-item:nth-child(5) {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .basket-goods__block-edit-good {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .good-box__select-quantity {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .good-box__select-block {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+
+  .block-button__basket {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .block-button__basket p {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+
+  .good-about__image {
+    width: 200px;
+    height: 200px;
+  }
+}
